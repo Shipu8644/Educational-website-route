@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "name": "Computer Technology",
+        "price": 100,
+        "duration": "6 month",
+        "img": ""
+    },
+    {
+        "id": 2,
+        "name": "Development Studies",
+        "price": 50,
+        "duration": "4 month",
+        "img": ""
+    },
+    {
+        "id": 3,
+        "name": "Accounting Technologies",
+        "price": 50,
+        "duration": "4 month",
+        "img": ""
+    },
+    {
+        "id": 4,
+        "name": "Artificial Intelligence",
+        "price": 150,
+        "duration": "6 month",
+        "img": ""
+    },
+    {
+        "id": 5,
+        "name": "Web Application",
+        "price": 100,
+        "duration": "6 month",
+        "img": ""
+    },
+    {
+        "id": 6,
+        "name": "Neural Networks",
+        "price": 50,
+        "duration": "4 month",
+        "img": ""
+    },
+    {
+        "id": 7,
+        "name": "Rocket Science",
+        "price": 150,
+        "duration": "6 month",
+        "img": ""
+    },
+    {
+        "id": 8,
+        "name": "Robotics",
+        "price": 50,
+        "duration": "4 month",
+        "img": ""
+    },
+    {
+        "id": 9,
+        "name": "Microprocessor core conecpts",
+        "price": 50,
+        "duration": "4 month",
+        "img": ""
+    },
+    {
+        "id": 10,
+        "name": "Operating System",
+        "price": 100,
+        "duration": "4 month",
+        "img": ""
+    },
+    {
+        "id": 11,
+        "name": "Hardware and Software",
+        "price": 50,
+        "duration": "4 month",
+        "img": ""
+    }
+]
