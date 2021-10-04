@@ -6,7 +6,7 @@ const About = () => {
             <div className='grid grid-cols-2 m-8'>
 
                 <article className='p-8 ml-10'>
-                    <h1 className='text-4xl font-mono uppercase mt-6 mb-4'>About the Institute of Oxford <span className='text-indigo-600 font-serif'>MKS&Tech</span> </h1>
+                    <h1 className='text-4xl font-mono uppercase mt-6 mb-4'>About the Institute of the best <span className='text-indigo-600 font-serif'>MKS&Tech</span> </h1>
 
                     <h2><span className='text-indigo-600 font-serif text-2xl '>MKS&Tech</span> is a world-leading centre of learning, teaching and research and the oldest institute in the English-speaking world.</h2>
 
