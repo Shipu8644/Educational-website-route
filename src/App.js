@@ -8,6 +8,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Courses from './components/Courses/Courses';
 import CourseDetails from './components/CourseDetails/CourseDetails';
+import Teachers from './components/Teachers/Teachers';
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
             <About></About>
           </Route>
 
-          <Route path='/courses'>
+          <Route exact path='/courses'>
             <Courses></Courses>
           </Route>
 
@@ -37,11 +38,13 @@ function App() {
             <CourseDetails></CourseDetails>
           </Route>
 
+          <Route path='/teachers'>
+            <Teachers></Teachers>
+          </Route>
 
-
-          {/* <Route path='*'>
+          <Route path='*'>
             <NotFound></NotFound>
-          </Route> */}
+          </Route>
         </Switch>
 
         <Footer></Footer>
