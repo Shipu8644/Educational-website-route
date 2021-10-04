@@ -10,7 +10,7 @@ const Header = () => {
         <div>
             <div >
 
-                <nav className="bg-white py-2 md:py-4">
+                <nav className="bg-white py-2 md:py-4 border-b-2">
                     <div className="container px-4 mx-auto md:flex md:items-center">
 
                         <div className="flex justify-between items-center">
@@ -38,7 +38,7 @@ const Header = () => {
                         </div>
                     </div>
                 </nav>
-                <hr className='border-2' />
+
 
             </div>
 
