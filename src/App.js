@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NotFound from './components/NotFound/NotFound';
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Courses from './components/Courses/Courses';
+import CourseDetails from './components/CourseDetails/CourseDetails';
+
 
 function App() {
   return (
@@ -25,6 +28,15 @@ function App() {
           <Route path='/about'>
             <About></About>
           </Route>
+
+          <Route path='/courses'>
+            <Courses></Courses>
+          </Route>
+
+          <Route path='/course/:courseId'>
+            <CourseDetails></CourseDetails>
+          </Route>
+
 
 
           {/* <Route path='*'>

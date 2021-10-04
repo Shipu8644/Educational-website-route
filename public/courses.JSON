@@ -4,76 +4,76 @@
         "name": "Computer Technology",
         "price": 100,
         "duration": "6 month",
-        "img": ""
+        "img": "http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/5.jpg"
     },
     {
         "id": 2,
         "name": "Development Studies",
         "price": 50,
         "duration": "4 month",
-        "img": ""
+        "img": "http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/6.jpg"
     },
     {
         "id": 3,
         "name": "Accounting Technologies",
         "price": 50,
         "duration": "4 month",
-        "img": ""
+        "img": "http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/4.jpg"
     },
     {
         "id": 4,
         "name": "Artificial Intelligence",
         "price": 150,
         "duration": "6 month",
-        "img": ""
+        "img": "https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/06/Types-Of-Artificial-Intelligence.jpg"
     },
     {
         "id": 5,
         "name": "Web Application",
         "price": 100,
         "duration": "6 month",
-        "img": ""
+        "img": "https://hachinet.com/upload/2020/08/web-app-la-gi-co-gi-khac-voi-website-20200831080108.png"
     },
     {
         "id": 6,
         "name": "Neural Networks",
         "price": 50,
         "duration": "4 month",
-        "img": ""
+        "img": "https://eenews.cdnartwhere.eu/sites/default/files/styles/inner_article/public/import/2015-11-30-s20_brainchip.jpg?itok=xTeXRB5F"
     },
     {
         "id": 7,
         "name": "Rocket Science",
         "price": 150,
         "duration": "6 month",
-        "img": ""
+        "img": "https://cdn.vox-cdn.com/thumbor/KnctRzC2sg3vppjdKIOnZNcy-QQ=/0x0:2667x1500/1200x800/filters:focal(1121x537:1547x963)/cdn.vox-cdn.com/uploads/chorus_image/image/57657813/Rocket_banner.0.jpg"
     },
     {
         "id": 8,
         "name": "Robotics",
         "price": 50,
         "duration": "4 month",
-        "img": ""
+        "img": "https://miro.medium.com/max/800/0*i9fwlQw-55T7Bydg.jpg"
     },
     {
         "id": 9,
         "name": "Microprocessor core conecpts",
         "price": 50,
         "duration": "4 month",
-        "img": ""
+        "img": "https://image.shutterstock.com/image-photo/prague-czech-republic-january-2019-260nw-1617600667.jpg"
     },
     {
         "id": 10,
         "name": "Operating System",
         "price": 100,
         "duration": "4 month",
-        "img": ""
+        "img": "https://predictabledesigns.com/wp-content/uploads/2020/06/FeaturedImage-1.jpg"
     },
     {
         "id": 11,
         "name": "Hardware and Software",
         "price": 50,
         "duration": "4 month",
-        "img": ""
+        "img": "https://www.creationtech.com/wp-content/uploads/2018/05/IoT-AdobeStock_140202697-1024x768-1-1024x768.jpg"
     }
 ]
