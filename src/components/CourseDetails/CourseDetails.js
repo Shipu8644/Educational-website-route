@@ -14,7 +14,7 @@ const CourseDetails = () => {
     // console.log(details);
     return (
         <div>
-            <h1 className='text-3xl'>Details URL is not available</h1>
+            <h1 className='text-3xl text-center'>Details URL is not available</h1>
             <br />
             <NotFound></NotFound>
         </div>

@@ -12,7 +12,7 @@ import CourseDetails from './components/CourseDetails/CourseDetails';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       < Router >
         <Header></Header>
 
