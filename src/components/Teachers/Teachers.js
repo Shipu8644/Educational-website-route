@@ -7,7 +7,7 @@ const Teachers = () => {
     console.log(teachers);
     return (
         <div>
-            <h1 className='text-3xl text-center font-serif uppercase  '>Our <span className='text-indigo-600'>Teachers</span></h1>
+            <h1 className='text-3xl text-center font-serif uppercase mt-8  '>Our <span className='text-indigo-600'>Teachers</span></h1>
             <div className='p-4 ml-20 mr-15'>
                 {
                     teachers.map(teacher => <Teacher teacher={teacher}></Teacher>)

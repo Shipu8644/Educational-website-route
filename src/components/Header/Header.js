@@ -38,7 +38,7 @@ const Header = () => {
                         </div>
                     </div>
                 </nav>
-
+                <hr className='border-2' />
 
             </div>
 
