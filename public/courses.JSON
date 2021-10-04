@@ -4,21 +4,21 @@
         "name": "Computer Technology",
         "price": 100,
         "duration": "6 month",
-        "img": "http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/5.jpg"
+        "img": "https://s3.ap-south-1.amazonaws.com/upgrad.prod.blog/blog/wp-content/uploads/2021/06/23100622/shutterstock_746652745-1.jpg"
     },
     {
         "id": 2,
         "name": "Development Studies",
         "price": 50,
         "duration": "4 month",
-        "img": "http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/6.jpg"
+        "img": "https://leverageedu.com/blog/wp-content/uploads/2020/07/Development-Studies.jpg"
     },
     {
         "id": 3,
         "name": "Accounting Technologies",
         "price": 50,
         "duration": "4 month",
-        "img": "http://html.kodesolution.live/s/studypress/v6.0/demo/images/project/4.jpg"
+        "img": "https://www.theaccountant-online.com/wp-content/uploads/sites/10/2021/06/Computer.jpg"
     },
     {
         "id": 4,
