@@ -22,11 +22,11 @@ function App() {
             <Home></Home>
           </Route>
 
-          <Route path='/home'>
+          <Route exact path='/home'>
             <Home></Home>
           </Route>
 
-          <Route path='/about'>
+          <Route exact path='/about'>
             <About></About>
           </Route>
 
@@ -38,7 +38,7 @@ function App() {
             <CourseDetails></CourseDetails>
           </Route>
 
-          <Route path='/teachers'>
+          <Route exact path='/teachers'>
             <Teachers></Teachers>
           </Route>
 

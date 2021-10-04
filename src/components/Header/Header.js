@@ -28,7 +28,7 @@ const Header = () => {
                             <NavLink to="/courses" activeStyle={activeStyle} className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Courses</NavLink>
 
 
-                            <NavLink to="/teachers" className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Teachers</NavLink>
+                            <NavLink to="/teachers" activeStyle={activeStyle} className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Teachers</NavLink>
 
                             <NavLink to="#" className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Gallery</NavLink>
 

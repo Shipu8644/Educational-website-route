@@ -57,12 +57,17 @@ const About = () => {
                     <h1 className='text-2xl text-indigo-600'>About</h1>
                     <a href="#blog-organization" className="hover:text-white hover:bg-gray-900 hover:border-white rounded">Organization</a>
                     <br />
-                    <a href="#blog-factAndFigures" className="hover:text-white hover:bg-gray-900 hover:border-white rounded">Facts and Figures</a>
+                    <hr className='border-1 mb-1' />
+
+                    <a href="#blog-factAndFigures" className="hover:text-white hover:bg-gray-900 hover:border-white rounded ">Facts and Figures</a>
                     <br />
+                    <hr className='border-1 mb-1' />
                     <a href="#blog-people" className="hover:text-white hover:bg-gray-900 hover:border-white rounded">People</a>
                     <br />
+                    <hr className='border-1 mb-1' />
                     <a href="#blog-future" className="hover:text-white hover:bg-gray-900 hover:border-white rounded">Future</a>
                     <br />
+                    <hr className='border-1 mb-1' />
                     <a href="#blog-career" className="hover:text-white hover:bg-gray-900 hover:border-white rounded">Career</a>
 
                 </section>
