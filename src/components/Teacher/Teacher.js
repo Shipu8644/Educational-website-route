@@ -15,21 +15,20 @@ const Teacher = (props) => {
                     <h4 className=' text-sm'>Gender: {gender}</h4>
                     <p className="text-sm">Age: {age}</p>
                     <p className="text-sm">Follower: {followers}</p>
-                    <div className='flex gap-5 items-end ml-96'>
-                        <a className='justify-items-end inline-block' href="#"><i className="fab fa-instagram-square text-gray-900
+                </div>
+
+                <div className='flex gap-5 mt-32 ml-10'>
+                    <a href="#"><i className="fab fa-instagram-square text-gray-900
                      text-3xl "></i></a>
 
-                        <a className='justify-items-end inline-block 
-                     ' href="#"><i className="fab fa-facebook text-blue-600
+                    <a href="#"><i className="fab fa-facebook text-blue-600
                      text-3xl"></i></a>
 
-                        <a className='justify-items-end inline-block' href="#"><i className="fab fa-linkedin text-blue-600
+                    <a href="#"><i className="fab fa-linkedin text-blue-600
                      text-3xl"></i></a>
-                    </div>
-
-
                 </div>
             </div>
+
         </div>
 
     );
