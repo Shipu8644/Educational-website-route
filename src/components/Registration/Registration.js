@@ -1,5 +1,8 @@
 import React from 'react';
 
+import intializeAuthentication from '../../Firebase/firebase.initialize';
+intializeAuthentication();
+
 const Registration = () => {
     return (
         <div>
