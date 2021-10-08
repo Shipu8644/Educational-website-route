@@ -9,6 +9,8 @@ import About from './components/About/About';
 import Courses from './components/Courses/Courses';
 import CourseDetails from './components/CourseDetails/CourseDetails';
 import Teachers from './components/Teachers/Teachers';
+import Registration from './components/Registration/Registration';
+import LogIn from './components/LogIn/LogIn';
 
 
 function App() {
@@ -41,7 +43,12 @@ function App() {
           <Route exact path='/teachers'>
             <Teachers></Teachers>
           </Route>
-
+          <Route exact path='/login'>
+            <LogIn></LogIn>
+          </Route>
+          <Route exact path='/signup'>
+            <Registration></Registration>
+          </Route>
           <Route path='*'>
             <NotFound></NotFound>
           </Route>
