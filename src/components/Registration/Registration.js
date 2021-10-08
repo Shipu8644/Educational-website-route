@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
 
 import intializeAuthentication from '../../Firebase/firebase.initialize';
 intializeAuthentication();
@@ -64,6 +64,15 @@ const Registration = () => {
         setForgetPass(e.target.checked);
     }
 
+    const handleResetPassword = () => {
+        sendPasswordResetEmail(auth, email)
+            .then(result => {
+
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -88,12 +97,22 @@ const Registration = () => {
                 console.log(user);
                 setError('');
                 verifyEmail();
+                setUserName();
 
             })
             .catch(error => {
                 setError(error.message);
 
             })
+    }
+    const setUserName = () => {
+        updateProfile(auth.currentUser, {
+            displayName: name,
+        }).then((result) => {
+
+        }).catch((error) => {
+            setError(console.message);
+        });
     }
 
     const verifyEmail = () => {
@@ -133,7 +152,7 @@ const Registration = () => {
                             </label>
                         </div>
                         <div className="md:w-2/3">
-                            <input onBlur={namehandle} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="text" placeholder="Your name" />
+                            <input onBlur={namehandle} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="text" placeholder="Your name" required />
                         </div>
                     </div>}
 
@@ -195,7 +214,8 @@ const Registration = () => {
                                 Sign In With Github
                             </button>
 
-                            {forgetPass && <button className='text-lg text-white border-2 bg-gray-400 ml-5 rounded-lg p-1'>Reset Password</button>}
+                            {forgetPass && <button onClick={handleResetPassword} className='text-lg
+                             text-white border-2 bg-gray-400 ml-5 rounded-lg p-1'>Reset Password</button>}
 
                             <button className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded ml-12" type="submit">
                                 {isLogIn ? "Sign In With Email and Password" : "Sign Up With Email and Password"}
