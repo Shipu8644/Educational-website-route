@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 import intializeAuthentication from '../../Firebase/firebase.initialize';
 intializeAuthentication();
@@ -72,7 +72,7 @@ const Registration = () => {
             return;
         }
 
-        registerNewUser(email, password);
+        isLogIn ? processLogin(email, password) : registerNewUser(email, password);
     }
 
     const registerNewUser = (email, password) => {
@@ -85,6 +85,17 @@ const Registration = () => {
             .catch(error => {
                 setError(error.message);
 
+            })
+    }
+    const processLogin = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                setError('');
+            })
+            .catch(error => {
+                setError(error.message);
             })
     }
 
