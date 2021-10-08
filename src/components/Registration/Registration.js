@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
 
 import intializeAuthentication from '../../Firebase/firebase.initialize';
 intializeAuthentication();
@@ -11,7 +11,7 @@ const Registration = () => {
 
     const auth = getAuth();
 
-
+    //  Google Sign In
     const handleGoogleSignIn = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
@@ -23,6 +23,7 @@ const Registration = () => {
             })
     }
 
+    // Github Sign in
     const handleGithubSignIn = () => {
         signInWithPopup(auth, githubProvider)
             .then(result => {
@@ -35,11 +36,19 @@ const Registration = () => {
             })
 
     }
+
+    //    passWord Sign up and In
+    const handleSignUp = (e) => {
+        e.preventDefault();
+        console.log(7777);
+    }
+
+
     return (
         <div>
             <h1 className='text-center text-4xl mt-6 mb-10'> Please Sign Up Here</h1>
 
-            <form className="flex items-center justify-center">
+            <form onSubmit={handleSignUp} className="flex items-center justify-center">
                 <div>
                     <div className="md:flex md:items-center mb-6">
                         <div className="md:w-1/3">
@@ -83,15 +92,17 @@ const Registration = () => {
                     <div className="md:flex md:items-center">
                         <div className="md:w-1/3"></div>
                         <div className="md:w-2/3">
-                            <button onClick={handleGoogleSignIn} className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mr-10 " type="button">
+                            <button onClick={handleGoogleSignIn} className="shadow bg-purple-500 
+                            hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mr-10 " type="button">
                                 Sign Up With Goolge
                             </button>
 
-                            <button onClick={handleGithubSignIn} className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mb-6" type="button">
+                            <button onClick={handleGithubSignIn} className="shadow bg-purple-500 
+                            hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mb-6" type="button">
                                 Sign Up With Github
                             </button>
 
-                            <button className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded ml-12" type="button">
+                            <button className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded ml-12" type="submit">
                                 Sign Up With Email and Password
                             </button>
                         </div>
