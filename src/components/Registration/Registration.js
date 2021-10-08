@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 
 import intializeAuthentication from '../../Firebase/firebase.initialize';
 intializeAuthentication();
@@ -87,10 +87,19 @@ const Registration = () => {
                 const user = result.user;
                 console.log(user);
                 setError('');
+                verifyEmail();
+
             })
             .catch(error => {
                 setError(error.message);
 
+            })
+    }
+
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+                console.log(result);
             })
     }
 
@@ -105,6 +114,8 @@ const Registration = () => {
                 setError(error.message);
             })
     }
+
+
 
 
 
