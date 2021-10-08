@@ -12,8 +12,10 @@ const Registration = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPass] = useState('');
-    const [isLogIn, setIsLogIn] = useState('');
+    const [isLogIn, setIsLogIn] = useState(false);
+    const [forgetPass, setForgetPass] = useState(false);
     const [error, setError] = useState('');
+
 
     //  Google Sign In
     const handleGoogleSignIn = () => {
@@ -58,13 +60,17 @@ const Registration = () => {
         setIsLogIn(e.target.checked);
     }
 
+    const toggleResetPass = (e) => {
+        setForgetPass(e.target.checked);
+    }
+
 
     const handleSignUp = (e) => {
         e.preventDefault();
         console.log(password, email);
 
         if (password.length < 6) {
-            setError('Password must be at least 6 characters long');
+            setError('Password must be attt least 6 characters long');
             return;
         }
         if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
@@ -87,6 +93,7 @@ const Registration = () => {
 
             })
     }
+
     const processLogin = (email, password) => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
@@ -127,7 +134,7 @@ const Registration = () => {
                             </label>
                         </div>
                         <div className="md:w-2/3">
-                            <input onBlur={emailHandle} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="text" placeholder="Your email" />
+                            <input onBlur={emailHandle} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="text" placeholder="Your email" required />
                         </div>
                     </div>
 
@@ -139,20 +146,28 @@ const Registration = () => {
                             </label>
                         </div>
                         <div className="md:w-2/3">
-                            <input onBlur={passHandle} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="password" placeholder="******************" />
+                            <input onBlur={passHandle} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="password" placeholder="******************" required />
                         </div>
                     </div>
 
                     {/* Error Section */}
+
                     <div className='text-center text-red-400 ml-10 mb-10'>
                         <p> {error}</p>
                     </div>
+
+                    {/* CheckBox Section */}
+
                     <div className="md:flex md:items-center mb-6">
                         <div className="md:w-1/3"></div>
                         <label className="md:w-2/3 block text-gray-500 font-bold">
                             <input onChange={toggleLogIn} className="mr-2 leading-tight" type="checkbox" />
-                            <span className="text-sm">
+                            <span className="text-sm mr-5">
                                 Already Registered?
+                            </span>
+                            <input onChange={toggleResetPass} className="mr-2 leading-tight" type="checkbox" />
+                            <span className="text-sm">
+                                Forget Password?
                             </span>
                         </label>
                     </div>
@@ -168,6 +183,8 @@ const Registration = () => {
                             hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mb-6" type="button">
                                 Sign In With Github
                             </button>
+
+                            {forgetPass && <button className='text-lg text-white border-2 bg-gray-400 ml-5 rounded-lg p-1'>Reset Password</button>}
 
                             <button className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded ml-12" type="submit">
                                 {isLogIn ? "Sign In With Email and Password" : "Sign Up With Email and Password"}
