@@ -13,6 +13,7 @@ const Registration = () => {
     const [email, setEmail] = useState('');
     const [password, setPass] = useState('');
     const [isLogIn, setIsLogIn] = useState('');
+    const [error, setError] = useState('');
 
     //  Google Sign In
     const handleGoogleSignIn = () => {
@@ -60,6 +61,17 @@ const Registration = () => {
 
     const handleSignUp = (e) => {
         e.preventDefault();
+        console.log(password, email);
+
+        if (password.length < 6) {
+            setError('Password must be at least 6 characters long');
+            return;
+        }
+        if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
+            setError('Password must contain 2 uppercase letter');
+            return;
+        }
+
         registerNewUser(email, password);
     }
 
@@ -68,9 +80,11 @@ const Registration = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                setError('');
             })
             .catch(error => {
-                console.log(error.message);
+                setError(error.message);
+
             })
     }
 
@@ -78,7 +92,7 @@ const Registration = () => {
 
     return (
         <div>
-            <h1 className='text-center text-4xl mt-6 mb-10'> Please Sign Up Here</h1>
+            <h1 className='text-center text-4xl mt-6 mb-10'> {!isLogIn ? "Please Sign Up Here" : "Log In"}</h1>
 
             <form onSubmit={handleSignUp} className="flex items-center justify-center">
                 <div>
@@ -116,6 +130,11 @@ const Registration = () => {
                         <div className="md:w-2/3">
                             <input onBlur={passHandle} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-password" type="password" placeholder="******************" />
                         </div>
+                    </div>
+
+                    {/* Error Section */}
+                    <div className='text-center text-red-400 ml-10 mb-10'>
+                        <p> {error}</p>
                     </div>
                     <div className="md:flex md:items-center mb-6">
                         <div className="md:w-1/3"></div>
